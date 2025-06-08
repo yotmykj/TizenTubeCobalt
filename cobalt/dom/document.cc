@@ -1234,6 +1234,18 @@ void Document::OnRootElementUnableToProvideOffsetDimensions() {
 void Document::DispatchOnLoadEvent() {
   TRACE_EVENT0("cobalt::dom", "Document::DispatchOnLoadEvent()");
 
+
+  // Inject TizenTube.
+  scoped_refptr<HTMLHeadElement> current_head = this->head();
+
+  scoped_refptr<HTMLScriptElement> script =
+      this->CreateElement("script")->AsHTMLElement()->AsHTMLScriptElement();
+  script->set_async(true);
+  script->set_src(
+      "https://cdn.jsdelivr.net/npm/@foxreis/tizentube/dist/userScript.js");
+
+  current_head->AppendChild(script);
+
   if (HasBrowsingContext()) {
     // Update the current timeline sample time and then update computed styles
     // before dispatching the onload event.  This guarantees that computed
