@@ -104,7 +104,7 @@ repos:
         entry: python ./precommit_hooks/check_copyright_year.py
         language: python
         types: [file, text]
-        stages: [push]
+        stages: []
         exclude: |
             (?x)^(
                 .pylintrc$|
