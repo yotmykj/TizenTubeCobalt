@@ -22,7 +22,7 @@ Cobalt is a lightweight, cross-platform application container and runtime for HT
 
 Get the latest release for your platform:
 
-[**Download Latest Release**](https://github.com/reisxd/TizenTube/releases/latest)
+[**Download Latest Release**](https://github.com/reisxd/TizenTubeCobalt/releases/latest)
 
 AFTVNews code: `6366500`
 
