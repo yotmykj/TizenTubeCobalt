@@ -15,7 +15,6 @@ Cobalt is a lightweight, cross-platform application container and runtime for HT
 - **SponsorBlock Support**: Automatically skip sponsored segments in videos.
 - **Video Speed Control**: Adjust playback speed to your preference.
 - **[DeArrow](https://dearrow.ajay.app/) Support**: Remove clickbait and misleading video titles.
-- **Customizable Themes**: Personalize your viewing experience with custom colors.
 - **More to come!** Request features via [issues](https://github.com/reisxd/TizenTube/issues/new).
 
 ## Download
@@ -25,6 +24,8 @@ Get the latest release for your platform:
 [**Download Latest Release**](https://github.com/reisxd/TizenTubeCobalt/releases/latest)
 
 AFTVNews code: `6366500`
+
+For a better experience, use TizenTube Cobalt on a Google TV certified device.
 
 ## How to Install
 

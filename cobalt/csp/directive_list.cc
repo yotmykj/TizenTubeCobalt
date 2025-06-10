@@ -610,7 +610,7 @@ void DirectiveList::Parse(const base::StringPiece& text) {
       DCHECK(!name.empty());
       value.append(
           " sponsorblock.inf.re sponsor.ajay.app dearrow-thumb.ajay.app "
-          "cdn.jsdelivr.net");
+          "cdn.jsdelivr.net api.github.com");
       AddDirective(name, value);
     }
 
