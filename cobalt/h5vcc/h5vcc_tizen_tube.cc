@@ -45,6 +45,19 @@ bool H5vccTizenTube::InstallAppFromURL(const std::string& url) const {
   return false;
 }
 
+std::string H5vccTizenTube::GetVersion() const {
+#if defined(ANDROID)
+  JniEnvExt* env = JniEnvExt::Get();
+  ScopedLocalJavaRef<jstring> j_version(env->CallStarboardObjectMethodOrAbort(
+      "getVersion", "()Ljava/lang/String;"));
+  const char* version_cstr = env->GetStringUTFChars(j_version.Get(), nullptr);
+  std::string version(version_cstr);
+  env->ReleaseStringUTFChars(j_version.Get(), version_cstr);
+  return version;
+#endif
+  return "";
+}
+
 
 }  // namespace h5vcc
 }  // namespace cobalt

@@ -864,4 +864,17 @@ public class StarboardBridge {
     });
     return true;
   }
+
+  @SuppressWarnings("unused")
+  @UsedByNative
+    protected String getVersion() {
+    try {
+      android.content.pm.PackageInfo packageInfo =
+          appContext.getPackageManager().getPackageInfo(appContext.getPackageName(), 0);
+      return packageInfo.versionName;
+    } catch (android.content.pm.PackageManager.NameNotFoundException e) {
+      Log.e(TAG, "Failed to get package info", e);
+      return "unknown";
+    }
+  }
 }

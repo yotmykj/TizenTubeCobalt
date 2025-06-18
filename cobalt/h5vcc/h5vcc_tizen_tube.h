@@ -46,6 +46,7 @@ class H5vccTizenTube : public script::Wrappable {
   // Calls a Java method in order to download the APK
   // and install it.
   bool InstallAppFromURL(const std::string& url) const;
+  std::string GetVersion() const;
 
   DEFINE_WRAPPABLE_TYPE(H5vccTizenTube);
 
