@@ -97,5 +97,12 @@ std::string H5vccTizenTube::GetArchitecture() const {
   return "";
 }
 
+void H5vccTizenTube::SetFrameRate(float frame_rate) const {
+#if defined(ANDROID)
+  JniEnvExt* env = JniEnvExt::Get();
+  env->CallStarboardVoidMethodOrAbort("setFrameRate", "(F)V", frame_rate);
+#endif
+}
+
 }  // namespace h5vcc
 }  // namespace cobalt
