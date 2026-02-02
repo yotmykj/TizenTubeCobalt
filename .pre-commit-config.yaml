@@ -129,6 +129,7 @@ repos:
                 starboard/shared/starboard/player/filter/decoded_audio_queue.h$|
                 starboard/shared/starboard/player/testdata/licences/|
                 starboard/shared/starboard/player/filter/wsola_internal.cc$
+                starboard/contrib/rdk/src/third_party/starboard/rdk/|
             )
         exclude_types: [markdown]
         verbose: true
