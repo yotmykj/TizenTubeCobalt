@@ -883,4 +883,10 @@ public class StarboardBridge {
   protected String getBrandAndModel() {
     return Settings.Global.getString(appContext.getContentResolver(), "device_name");
   }
+
+  @SuppressWarnings("unused")
+  @UsedByNative
+  protected String getArchitecture() {
+    return Build.SUPPORTED_ABIS[0];
+  }
 }

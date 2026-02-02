@@ -82,6 +82,20 @@ bool H5vccTizenTube::SetUserAgent(const std::string& user_agent) const {
   return true;
 }
 
+std::string H5vccTizenTube::GetArchitecture() const {
+#if defined(ANDROID)
+  JniEnvExt* env = JniEnvExt::Get();
+  ScopedLocalJavaRef<jstring> j_architecture(
+      env->CallStarboardObjectMethodOrAbort("getArchitecture",
+                                            "()Ljava/lang/String;"));
+  const char* architecture_cstr =
+      env->GetStringUTFChars(j_architecture.Get(), nullptr);
+  std::string architecture(architecture_cstr);
+  env->ReleaseStringUTFChars(j_architecture.Get(), architecture_cstr);
+  return architecture;
+#endif
+  return "";
+}
 
 }  // namespace h5vcc
 }  // namespace cobalt

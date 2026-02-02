@@ -48,6 +48,7 @@ class H5vccTizenTube : public script::Wrappable {
   bool InstallAppFromURL(const std::string& url) const;
   std::string GetVersion() const;
   bool SetUserAgent(const std::string& user_agent) const;
+  std::string GetArchitecture() const;
 
   DEFINE_WRAPPABLE_TYPE(H5vccTizenTube);
 
