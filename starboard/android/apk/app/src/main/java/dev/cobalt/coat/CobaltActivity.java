@@ -27,6 +27,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.Pair;
 import android.view.Surface;
+import android.view.Display;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
 import android.view.ViewParent;
@@ -442,7 +443,7 @@ public abstract class CobaltActivity extends GameActivity {
     runOnUiThread(runnable);
   }
 
-  public void setFrameRate(float frameRate) {
+  public void setFrameRate(float frameRate, int strategy) {
     if (Build.VERSION.SDK_INT < 30) {
       return;
     }
@@ -452,7 +453,9 @@ public abstract class CobaltActivity extends GameActivity {
           @Override
           public void run() {
             Surface videoSurface = VideoSurfaceView.getCurrentSurface();
-            videoSurface.setFrameRate(frameRate, Surface.FRAME_RATE_COMPATIBILITY_DEFAULT);
+            if (Build.VERSION.SDK_INT == 30) videoSurface.setFrameRate(frameRate, Surface.FRAME_RATE_COMPATIBILITY_FIXED_SOURCE);
+            else if (Build.VERSION.SDK_INT >= 31)
+              videoSurface.setFrameRate(frameRate, Surface.FRAME_RATE_COMPATIBILITY_FIXED_SOURCE, strategy);
           }
         };
 

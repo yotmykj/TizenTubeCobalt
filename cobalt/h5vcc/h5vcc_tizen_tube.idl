@@ -17,5 +17,5 @@ interface H5vccTizenTube {
     DOMString GetVersion();
     boolean SetUserAgent(DOMString user_agent);
     DOMString GetArchitecture();
-    void SetFrameRate(long frame_rate);
+    void SetFrameRate(float frame_rate);
 };
