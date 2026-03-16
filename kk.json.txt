@@ -1,0 +1,47 @@
+{
+  "settings": "Баптаулар",
+  "general": "Жалпы",
+  "appearance": "Көрініс",
+  "interface": "Интерфейс",
+  "player": "Ойнатқыш",
+
+  "language": "Тіл",
+  "theme": "Тақырып",
+  "dark_theme": "Қараңғы тақырып",
+  "light_theme": "Жарық тақырып",
+  "system_theme": "Жүйе тақырыбы",
+
+  "video_settings": "Бейне баптаулары",
+  "video_quality": "Бейне сапасы",
+  "default_quality": "Әдепкі сапа",
+  "playback_speed": "Ойнату жылдамдығы",
+
+  "autoplay": "Автоматты ойнату",
+  "autoplay_next": "Келесі бейнені автоматты түрде ойнату",
+
+  "subtitles": "Субтитрлер",
+  "subtitles_enabled": "Субтитрлерді қосу",
+  "subtitles_language": "Субтитр тілі",
+
+  "sponsorblock": "SponsorBlock",
+  "skip_sponsors": "Демеуші бөліктерін өткізу",
+  "skip_intro": "Кіріспені өткізу",
+  "skip_outro": "Қорытындыны өткізу",
+
+  "ui_settings": "Интерфейс баптаулары",
+  "hide_watched": "Қаралған бейнелерді жасыру",
+  "hide_shorts": "YouTube Shorts жасыру",
+  "disable_animations": "Анимацияларды өшіру",
+
+  "advanced": "Қосымша баптаулар",
+  "developer_mode": "Әзірлеуші режимі",
+  "debug_mode": "Жөндеу режимі",
+
+  "update": "Жаңарту",
+  "check_updates": "Жаңартуларды тексеру",
+  "update_available": "Жаңарту қолжетімді",
+
+  "about": "Қолданба туралы",
+  "version": "Нұсқа",
+  "restart_required": "Өзгерістер күшіне енуі үшін қолданбаны қайта іске қосыңыз"
+}
